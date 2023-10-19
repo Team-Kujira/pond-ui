@@ -1,27 +1,38 @@
-# React + TypeScript + Vite
+# Pond UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A UI starter pack for dApps built on [Kujira](https://github.com/Team-Kujira/core)
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Out of the box, the boilerplate is compatible with Testnet and Mainnet:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```
+git clone https://github.com/Team-Kujira/pond-ui.git
+cd pond-ui
+npm i
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Using a local chain
+
+Add configuration for a `pond-1` local network with [Pond](https://github.com/Team-Kujira/pond), a tool for local orcestration of a kujira network.
+
+Start the local network. Ensure you have [Docker](http://docker.com) installed and running.
+
+```
+cd ..
+mkdir pond
+docker run -e USER=$UID -v ./pond:/tmp/pond docker.io/starsquid/pond-prepare:latest prepare.py --nodes 1
+cd pond
+./start
+```
+
+Load the config into your pond-ui app
+
+```
+cd ../pond-ui
+./scripts/configure.sh ../pond
+npm run dev
+```
+
+`pond-1` will now be available as a network in the selector
