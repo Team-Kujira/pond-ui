@@ -36,3 +36,8 @@ npm run dev
 ```
 
 `pond-1` will now be available as a network in the selector
+
+## Coming Soon...
+
+- Wallet connections
+- Transaction signing & broadcasting
