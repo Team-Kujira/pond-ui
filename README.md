@@ -9,6 +9,7 @@ Out of the box, the boilerplate is compatible with Testnet and Mainnet:
 ```
 git clone https://github.com/Team-Kujira/pond-ui.git
 cd pond-ui
+./scripts/configure.sh
 npm i
 npm run dev
 ```
