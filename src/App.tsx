@@ -1,12 +1,9 @@
 import { BlockResponse } from "@cosmjs/tendermint-rpc";
 import { useEffect, useState } from "react";
 import config from "../config.json";
-import "./App.css";
-import { Status } from "./Status";
-import { Validator } from "./Validator";
-import reactLogo from "./assets/react.svg";
+import "./css/App.css";
+import { Status, Validator } from "./components";
 import { useQueryClient } from "./useQueryClient";
-import viteLogo from "/vite.svg";
 
 function App() {
   const { tmClient } = useQueryClient();
@@ -17,28 +14,21 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a href="https://kujira.network" target="_blank">
-          <img src={reactLogo} className="logo kujira" alt="Kujira logo" />
-        </a>
+      <div className="header">
+        <img
+          src="/kujira-logo.png"
+          srcSet="/kujira-logo.png, /kujira-logo@2x.png 2x"
+          className="logo"
+          alt="Kujira logo"
+        />
+        <pre>
+          block height:{" "}
+          <strong className="color-white">{block?.block.header.height}</strong>
+        </pre>
       </div>
-      <h1>Vite + React + Kujira</h1>
-      <div className="card">
-        <button>block height: {block?.block.header.height}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite, React and Kujira logos to learn more
-      </p>
-      <div>
+
+      <div className="body">
+        <h1>Kujira Pond</h1>
         <h2>
           <strong>pond-1</strong> Local Network:
         </h2>
