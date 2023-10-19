@@ -5,6 +5,7 @@ import "./App.css";
 import { Status } from "./Status";
 import { Validator } from "./Validator";
 import reactLogo from "./assets/react.svg";
+import { NetworkSelect } from "./useNetwork";
 import { useQueryClient } from "./useQueryClient";
 import viteLogo from "/vite.svg";
 
@@ -40,7 +41,8 @@ function App() {
       </p>
       <div>
         <h2>
-          <strong>pond-1</strong> Local Network:
+          <NetworkSelect />
+          Local Network:
         </h2>
         <Status />
         <ul>
