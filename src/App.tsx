@@ -4,6 +4,7 @@ import config from "../config.json";
 import "./css/App.css";
 import { Status, Validator } from "./components";
 import { useQueryClient } from "./useQueryClient";
+import { NetworkSelect } from "./useNetwork";
 
 function App() {
   const { tmClient } = useQueryClient();
@@ -30,7 +31,8 @@ function App() {
       <div className="body">
         <h1>Kujira Pond</h1>
         <h2>
-          <strong>pond-1</strong> Local Network:
+          <NetworkSelect />
+          Local Network:
         </h2>
         <Status />
         <ul>

@@ -13,6 +13,7 @@ import {
   useState,
 } from "react";
 import config from "../config.json";
+import { useNetwork } from "./useNetwork";
 
 const toClient = async (
   url: string
@@ -27,8 +28,22 @@ const toClient = async (
   }
 };
 
-export const createTmClient = async () => {
-  const rpcs = config.chains["pond-1"].nodes.map((n) => n.rpc);
+interface NodeConfig {
+  address: string;
+  validator: string;
+  mnemonic: string;
+  rpc: string;
+}
+
+interface ChainConfig {
+  nodes: NodeConfig[];
+}
+
+export const createTmClient = async (network: string) => {
+  const chains: Record<string, ChainConfig> = config.chains;
+  if (!(network in chains))
+    throw new Error(`No config available for ${network}`);
+  const rpcs = chains[network].nodes.map((n) => n.rpc);
   return Promise.any(rpcs.map(toClient));
 };
 
@@ -43,8 +58,9 @@ const Context = createContext<Context>({});
 export const QueryContext: FC<PropsWithChildren> = ({ children }) => {
   const [tmClient, setTmClient] = useState<Tendermint37Client>();
   const [status, setStatus] = useState<StatusResponse | null>();
+  const { network } = useNetwork();
   useEffect(() => {
-    createTmClient()
+    createTmClient(network)
       .then(([tmClient, status]) => {
         setTmClient(tmClient);
         setStatus(status);
@@ -53,7 +69,7 @@ export const QueryContext: FC<PropsWithChildren> = ({ children }) => {
         console.error(err);
         setStatus(null);
       });
-  }, []);
+  }, [network]);
   return (
     <Context.Provider
       value={{
