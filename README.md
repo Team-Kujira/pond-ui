@@ -14,7 +14,7 @@ npm i
 npm run dev
 ```
 
-### Using a local chain
+### Using a local chain (Coming VERY soon)
 
 Add configuration for a `pond-1` local network with [Pond](https://github.com/Team-Kujira/pond), a tool for local orcestration of a kujira network.
 
