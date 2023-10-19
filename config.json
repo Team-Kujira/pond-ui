@@ -1,10 +1,14 @@
 {
-  "nodes": [
-    {
-      "address": "kujira1xf2wgjvkd5e45tz4mzldlzknwsdardycq3nhy6",
-      "validator": "kujiravaloper1xf2wgjvkd5e45tz4mzldlzknwsdardyc8yqyc4",
-      "mnemonic": "long car family monster hip gospel panda insect target used glare leisure scout police maid achieve dial estate material upon uncover gallery notable angle",
-      "rpc": "http://localhost:10157"
+  "chains": {
+    "pond-1": {
+      "nodes": [
+        {
+          "address": "kujira1xf2wgjvkd5e45tz4mzldlzknwsdardycq3nhy6",
+          "validator": "kujiravaloper1xf2wgjvkd5e45tz4mzldlzknwsdardyc8yqyc4",
+          "mnemonic": "long car family monster hip gospel panda insect target used glare leisure scout police maid achieve dial estate material upon uncover gallery notable angle",
+          "rpc": "http://localhost:10157"
+        }
+      ]
     }
-  ]
+  }
 }

@@ -28,7 +28,7 @@ const toClient = async (
 };
 
 export const createTmClient = async () => {
-  const rpcs = config.nodes.map((n) => n.rpc);
+  const rpcs = config.chains["pond-1"].nodes.map((n) => n.rpc);
   return Promise.any(rpcs.map(toClient));
 };
 

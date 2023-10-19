@@ -39,10 +39,12 @@ function App() {
         Click on the Vite, React and Kujira logos to learn more
       </p>
       <div>
-        <h2>Local Network:</h2>
+        <h2>
+          <strong>pond-1</strong> Local Network:
+        </h2>
         <Status />
         <ul>
-          {config.nodes.map((n) => (
+          {config.chains["pond-1"].nodes.map((n) => (
             <Validator key={n.address} {...n} />
           ))}
         </ul>
