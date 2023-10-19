@@ -2,7 +2,7 @@ import { BlockResponse } from "@cosmjs/tendermint-rpc";
 import { useEffect, useState } from "react";
 import { Status, Validator } from "./components";
 import { chains } from "./config";
-import "./css/index.css";
+import "./css/App.css";
 import { NetworkSelect, useNetwork } from "./useNetwork";
 import { useQueryClient } from "./useQueryClient";
 
