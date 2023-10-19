@@ -26,21 +26,19 @@ function App() {
         />
         <pre>
           block height:{" "}
-          <strong className="color-white">{block?.block.header.height}</strong>
+          <strong className="color-white">
+            {block?.block.header.height.toLocaleString()}
+          </strong>
         </pre>
       </div>
 
       <div className="body">
         <h1>Kujira Pond</h1>
-        <h2>
-          <NetworkSelect />
-        </h2>
+        <NetworkSelect />
         <Status />
-        <ul>
-          {chains[network].nodes.map((n) => (
-            <Validator key={n.address} {...n} />
-          ))}
-        </ul>
+        {chains[network].nodes.map((n) => (
+          <Validator key={n.address} {...n} />
+        ))}
       </div>
     </>
   );
