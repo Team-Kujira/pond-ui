@@ -12,7 +12,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import config from "../config.json";
+import { chains } from "./config";
 import { useNetwork } from "./useNetwork";
 
 const toClient = async (
@@ -28,19 +28,7 @@ const toClient = async (
   }
 };
 
-interface NodeConfig {
-  address: string;
-  validator: string;
-  mnemonic: string;
-  rpc: string;
-}
-
-interface ChainConfig {
-  nodes: NodeConfig[];
-}
-
 export const createTmClient = async (network: string) => {
-  const chains: Record<string, ChainConfig> = config.chains;
   if (!(network in chains))
     throw new Error(`No config available for ${network}`);
   const rpcs = chains[network].nodes.map((n) => n.rpc);

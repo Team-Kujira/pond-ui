@@ -1,13 +1,14 @@
 import { QueryValidatorResponse } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { FC, useEffect, useState } from "react";
+import { NodeConfig } from "../config";
 import { useQueryClient } from "../useQueryClient";
 
-export const Validator: FC<{
-  address: string;
-  validator: string;
-  rpc: string;
-  mnemonic: string;
-}> = ({ address, validator, rpc, mnemonic }) => {
+export const Validator: FC<NodeConfig> = ({
+  address,
+  validator,
+  rpc,
+  mnemonic,
+}) => {
   const { queryClient } = useQueryClient();
   const [info, setInfo] = useState<QueryValidatorResponse>();
   useEffect(() => {
@@ -23,8 +24,12 @@ export const Validator: FC<{
       <dd>{validator}</dd>
       <dt>RPC</dt>
       <dd>{rpc}</dd>
-      <dt>Mnemonic</dt>
-      <dd>{mnemonic}</dd>
+      {mnemonic && (
+        <>
+          <dt>Mnemonic</dt>
+          <dd>{mnemonic}</dd>
+        </>
+      )}
     </dl>
   );
 };

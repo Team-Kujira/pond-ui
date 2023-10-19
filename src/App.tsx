@@ -1,10 +1,10 @@
 import { BlockResponse } from "@cosmjs/tendermint-rpc";
 import { useEffect, useState } from "react";
-import config from "../config.json";
-import "./css/App.css";
 import { Status, Validator } from "./components";
+import { chains } from "./config";
+import "./css/index.css";
+import { NetworkSelect, useNetwork } from "./useNetwork";
 import { useQueryClient } from "./useQueryClient";
-import { NetworkSelect } from "./useNetwork";
 
 function App() {
   const { tmClient } = useQueryClient();
@@ -12,6 +12,8 @@ function App() {
   useEffect(() => {
     tmClient?.block().then(setBlock);
   }, [tmClient]);
+
+  const { network } = useNetwork();
 
   return (
     <>
@@ -32,11 +34,10 @@ function App() {
         <h1>Kujira Pond</h1>
         <h2>
           <NetworkSelect />
-          Local Network:
         </h2>
         <Status />
         <ul>
-          {config.chains["pond-1"].nodes.map((n) => (
+          {chains[network].nodes.map((n) => (
             <Validator key={n.address} {...n} />
           ))}
         </ul>

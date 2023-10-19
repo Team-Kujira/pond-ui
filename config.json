@@ -1,12 +1,21 @@
 {
   "chains": {
-    "pond-1": {
+    "harpoon-4": {
       "nodes": [
         {
-          "address": "kujira1xf2wgjvkd5e45tz4mzldlzknwsdardycq3nhy6",
-          "validator": "kujiravaloper1xf2wgjvkd5e45tz4mzldlzknwsdardyc8yqyc4",
-          "mnemonic": "long car family monster hip gospel panda insect target used glare leisure scout police maid achieve dial estate material upon uncover gallery notable angle",
-          "rpc": "http://localhost:10157"
+          "address": "kujira1gp957czryfgyvxwn3tfnyy2f0t9g2p4p590k87",
+          "validator": "kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3",
+          "rpc": "https://kujira-testnet-rpc.polkachu.com"
+        }
+      ]
+    },
+
+    "kaiyo-1": {
+      "nodes": [
+        {
+          "address": "kujira1gp957czryfgyvxwn3tfnyy2f0t9g2p4p590k87",
+          "validator": "kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3",
+          "rpc": "https://kujira-rpc.polkachu.com"
         }
       ]
     }
