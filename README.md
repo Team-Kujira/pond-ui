@@ -16,11 +16,11 @@ npm run dev
 
 ### Using a local chain
 
-Add configuration for a `pond-1` local network with [Pond](https://github.com/Team-Kujira/pond), a tool for local orcestration of a kujira network.
+Add configuration for a `pond-1` local network with [pond](https://github.com/Team-Kujira/pond), a tool for local orcestration of a kujira network.
 
 Start the local network. Ensure you have [Docker](http://docker.com) installed and running.
 
-1. Install [Pond](https://github.com/Team-Kujira/pond)
+1. Install [pond](https://github.com/Team-Kujira/pond)
 2. `pond init`
 3. `pond start`
 
