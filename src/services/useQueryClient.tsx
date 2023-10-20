@@ -31,7 +31,7 @@ const toClient = async (
 export const createTmClient = async (network: string) => {
   if (!(network in chains))
     throw new Error(`No config available for ${network}`);
-  const rpcs = chains[network].nodes.map((n) => n.rpc);
+  const rpcs = chains[network].validators.map((n) => n.rpc_url);
   return Promise.any(rpcs.map(toClient));
 };
 

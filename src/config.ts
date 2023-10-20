@@ -1,14 +1,16 @@
 import config from "../config.json";
 
 export interface NodeConfig {
+  moniker: string;
   address: string;
-  validator: string;
+  valoper: string;
+  node_id: string;
   mnemonic?: string;
-  rpc: string;
+  rpc_url: string;
 }
 
 interface ChainConfig {
-  nodes: NodeConfig[];
+  validators: NodeConfig[];
 }
 
 export const chains: Record<string, ChainConfig> = config.chains;

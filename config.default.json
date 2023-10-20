@@ -1,20 +1,26 @@
 {
   "chains": {
     "harpoon-4": {
-      "nodes": [
+      "name": "testnet",
+      "validators": [
         {
+          "moniker": "hello-kujira-testrelay",
           "address": "kujira1gp957czryfgyvxwn3tfnyy2f0t9g2p4p590k87",
-          "validator": "kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3",
-          "rpc": "https://kujira-testnet-rpc.polkachu.com"
+          "valoper": "kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3",
+          "node_id": "2231d38fc416d0bfb7cfd24f6160fa3374e16f64",
+          "rpc_url": "https://kujira-testnet-rpc.polkachu.com"
         }
       ]
     },
     "kaiyo-1": {
-      "nodes": [
+      "name": "mainnet",
+      "validators": [
         {
+          "moniker": "hello-kujira-testrelay",
           "address": "kujira1gp957czryfgyvxwn3tfnyy2f0t9g2p4p590k87",
-          "validator": "kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3",
-          "rpc": "https://kujira-rpc.polkachu.com"
+          "valoper": "kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3",
+          "node_id": "9b7310c0510b26794a204912de0a9c88c19e5b85",
+          "rpc_url": "https://kujira-rpc.polkachu.com"
         }
       ]
     }

@@ -36,7 +36,7 @@ function App() {
         <h1>Kujira Pond</h1>
         <NetworkSelect />
         <Status />
-        {chains[network].nodes.map((n) => (
+        {chains[network].validators.map((n) => (
           <Validator key={n.address} {...n} />
         ))}
       </div>

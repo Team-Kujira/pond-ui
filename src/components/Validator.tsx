@@ -5,14 +5,14 @@ import { useQueryClient } from "../services/useQueryClient";
 
 export const Validator: FC<NodeConfig> = ({
   address,
-  validator,
-  rpc,
+  valoper,
+  rpc_url,
   mnemonic,
 }) => {
   const { queryClient } = useQueryClient();
   const [info, setInfo] = useState<QueryValidatorResponse>();
   useEffect(() => {
-    queryClient?.staking.validator(validator).then(setInfo);
+    queryClient?.staking.validator(valoper).then(setInfo);
   }, [queryClient]);
   return (
     <dl>
@@ -21,9 +21,9 @@ export const Validator: FC<NodeConfig> = ({
       <dt>Address</dt>
       <dd>{address}</dd>
       <dt>Validator Address</dt>
-      <dd>{validator}</dd>
+      <dd>{valoper}</dd>
       <dt>RPC</dt>
-      <dd>{rpc}</dd>
+      <dd>{rpc_url}</dd>
       {mnemonic && (
         <>
           <dt>Mnemonic</dt>
