@@ -14,10 +14,9 @@ Load the config into your pond-ui app
 
 4. `git clone https://github.com/Team-Kujira/pond-ui.git`
 5. cd pond-ui
-6. `./scripts/configure.sh`
-7. npm i
-8. `npm run dev`
-9. Start building!
+6. npm i
+7. `npm run dev`
+8. Start building!
 
 ## Coming Soon...
 
