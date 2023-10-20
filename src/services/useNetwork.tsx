@@ -6,7 +6,7 @@ import {
   useContext,
   useState,
 } from "react";
-import config from "../config.json";
+import config from "../../config.json";
 
 const networks = Object.keys(config.chains);
 

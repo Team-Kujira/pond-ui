@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useQueryClient } from "../useQueryClient";
+import { useQueryClient } from "../services/useQueryClient";
 
 export const Status: FC = () => {
   const { status } = useQueryClient();

@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { Status, Validator } from "./components";
 import { chains } from "./config";
 import "./css/App.css";
-import { NetworkSelect, useNetwork } from "./useNetwork";
-import { useQueryClient } from "./useQueryClient";
+import { NetworkSelect, useNetwork } from "./services/useNetwork";
+import { useQueryClient } from "./services/useQueryClient";
 
 function App() {
   const { tmClient } = useQueryClient();

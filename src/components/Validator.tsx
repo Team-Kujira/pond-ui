@@ -1,7 +1,7 @@
 import { QueryValidatorResponse } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { FC, useEffect, useState } from "react";
 import { NodeConfig } from "../config";
-import { useQueryClient } from "../useQueryClient";
+import { useQueryClient } from "../services/useQueryClient";
 
 export const Validator: FC<NodeConfig> = ({
   address,

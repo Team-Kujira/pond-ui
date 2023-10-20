@@ -12,7 +12,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { chains } from "./config";
+import { chains } from "../config";
 import { useNetwork } from "./useNetwork";
 
 const toClient = async (
