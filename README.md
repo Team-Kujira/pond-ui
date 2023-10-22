@@ -13,8 +13,8 @@ Start the local pond network. Ensure you have [Docker](http://docker.com) instal
 Load the config into your pond-ui app
 
 4. `git clone https://github.com/Team-Kujira/pond-ui.git`
-5. cd pond-ui
-6. npm i
+5. `cd pond-ui`
+6. `npm i`
 7. `npm run dev`
 8. Start building!
 
