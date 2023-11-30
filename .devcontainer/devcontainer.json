@@ -1,0 +1,20 @@
+{
+	"name": "Node.hs, TypeScript & Pond",
+    "build": {
+        "dockerfile": "Dockerfile",
+		"context": ".."
+    },
+
+	"forwardPorts": [10117, 10157, 5173],
+
+	"postCreateCommand": "pond init && pond start && npm i",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	}
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

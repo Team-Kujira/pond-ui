@@ -22,3 +22,16 @@ Load the config into your pond-ui app
 
 - Wallet connections
 - Transaction signing & broadcasting
+
+## Dev Containers
+
+To open the repository in a VS Code Devcontainer:
+- Use VS Code on your local machine
+- Install the [Dev Containers VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- Click on the bottom left and choose to Reopen in Container
+- Execute `npm run dev` and you are ready to build
+
+This will install:
+1. Pond
+2. Typescript
+3. npm
