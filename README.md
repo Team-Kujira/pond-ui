@@ -31,9 +31,6 @@ To open the repository in a VS Code Devcontainer:
 - Click on the bottom left and choose to Reopen in Container
 - Execute `npm run dev` and you are ready to build
 
-[!WARNING]
-Do not use it in Github Codespaces as the Kujira apps will not see it at the required IP Addresses
-
 This will install:
 1. Pond
 2. Typescript

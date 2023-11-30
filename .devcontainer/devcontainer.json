@@ -5,7 +5,7 @@
 		"context": ".."
     },
 
-	"forwardPorts": [10117, 10157],
+	"forwardPorts": [10117, 10157, 5173],
 
 	"postCreateCommand": "pond init && pond start && npm i",
 	"features": {
