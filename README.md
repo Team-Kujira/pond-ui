@@ -29,6 +29,7 @@ To open the repository in a VS Code Devcontainer:
 - Use VS Code on your local machine
 - Install the [Dev Containers VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 - Click on the bottom left and choose to Reopen in Container
+- Execute `npm run dev` and you are ready to build
 
 [!WARNING]
 Do not use it in Github Codespaces as the Kujira apps will not see it at the required IP Addresses
